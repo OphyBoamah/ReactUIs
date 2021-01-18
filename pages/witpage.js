@@ -3,20 +3,34 @@ import React from 'react';
 const witpage = () => {
   return (
     <header className='bg-gray-700 text-white font-bold h-screen overflow-hidden'>
-      <nav className='flex items-center justify-between h-24 px-20'>
+      <nav className='flex items-center justify-between h-24 px-8 lg:px-20'>
         <div>stural</div>
-        <div className='flex flex-none ml-30'>
+        <div className='hidden md:flex flex-none ml-30 '>
           <p className='font-normal text-sm px-10'>Search</p>
           <p className='font-normal text-sm px-10'>Sell</p>
           <p className='font-normal text-sm px-10'>Renting</p>
           <p className='font-normal text-sm px-10'>Financing</p>
         </div>
-        <button className='bg-white text-black py-2 px-3 text-sm'>
+        <button className='bg-white hidden md:block text-black py-2 px-3 text-sm'>
           Place an Ad
         </button>
+        <svg
+          className='lg:hidden block w-9'
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
+          stroke='currentColor'
+        >
+          <path
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            stroke-width='2'
+            d='M4 6h16M4 12h16M4 18h16'
+          />
+        </svg>
       </nav>
-      <div className='flex justify-between'>
-        <div className='w-1/2 pl-40 py-20'>
+      <div className='flex lg:flex-row flex-col justify-between'>
+        <div className='lg:w-1/2 px-10 lg:pl-40 py-10 lg:py-20'>
           <h1 className='font-bold text-5xl text-green-100'>
             We make complex <br />
             decisions simple.
@@ -28,7 +42,7 @@ const witpage = () => {
           </p>
           <div className='bg-white py-4 text-black flex '>
             <svg
-              className='w-6 mx-3'
+              className='lg:w-6 w-4 mx-3'
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
               viewBox='0 0 24 24'
@@ -42,7 +56,7 @@ const witpage = () => {
               />
             </svg>
             <input type='text' placeholder='Where do you want to move?' />
-            <button className='ml-40 bg-gray-800 text-white text-sm py-3 px-8'>
+            <button className='lg:block hidden lg:ml-32 bg-gray-800 text-white text-sm py-3 px-8'>
               Search
             </button>
           </div>
@@ -64,10 +78,10 @@ const witpage = () => {
             </svg>
           </div>
         </div>
-        <div className='w-1/2 pl-20'>
+        <div className='w-full lg:w-1/2 pl-20'>
           <img
             src='/images/witphoto.jpg'
-            className='w-1/3 h-full absolute right-0 object-cover'
+            className='w-1/3 h-full absolute right-0 object-cover hidden lg:block'
           />
         </div>
       </div>
